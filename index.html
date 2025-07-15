@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>🍎 Лови яблука у кошик</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>🍎 Лови яблука!</h1>
+  <div class="layout">
+    <div id="sidebar">
+      <h2>🏆 Таблиця рекордів</h2>
+      <table id="leaderboard">
+        <thead>
+          <tr>
+            <th>Гравець</th>
+            <th>Рекорд</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="main-content">
+      <div id="player-registration">
+        <p>Оберіть гравця або створіть новий:</p>
+        <select id="existingPlayers"></select>
+        <button onclick="selectExistingPlayer()">Увійти</button>
+        <button onclick="deleteSelectedPlayer()">Видалити гравця</button>
+        <br><br>
+        Нове ім'я:
+        <input type="text" id="playerName" placeholder="Введіть ім'я" />
+        <button onclick="registerPlayer()">Створити гравця</button>
+      </div>
+
+      <div id="game-controls" style="display:none;">
+        <p id="welcome"></p>
+        Рівень складності:
+        <select id="difficulty">
+          <option value="easy">Простий</option>
+          <option value="medium">Середньо</option>
+          <option value="hard">Складно</option>
+        </select>
+        <br><br>
+        Кількість життів:
+        <input type="number" id="lives" value="5" min="1" max="10" />
+        <button onclick="startGame()">Почати гру</button>
+      </div>
+
+      <div id="game"></div>
+      <p id="status"></p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

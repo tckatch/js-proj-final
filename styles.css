@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: #222;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+#sidebar {
+  min-width: 220px;
+  flex: 1 1 220px;
+  max-width: 220px;
+}
+
+#main-content {
+  flex: 1 1 800px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border: 2px solid #fff;
+  background: #111;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.apple {
+  position: absolute;
+  font-size: 40px;
+}
+
+.basket {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  height: 50px;
+  background: saddlebrown;
+  border-radius: 10px;
+}
+
+#status {
+  margin: 10px 0;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #333;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #555;
+  padding: 4px;
+  text-align: center;
+}
+
+th {
+  background: #444;
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  #game {
+    height: 400px;
+  }
+  .basket {
+    width: 60px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  #game {
+    height: 300px;
+  }
+  .basket {
+    width: 50px;
+    height: 35px;
+  }
+  table {
+    font-size: 12px;
+  }
+  th {
+    font-size: 13px;
+  }
+}
